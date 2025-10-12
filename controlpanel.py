@@ -892,7 +892,7 @@ class control_panel:
             print(f'groups {group_name} created !!')
             
         else:
-            print('your group name is duplicated')
+            print(f'your group name is duplicated')
         
     
     def add_device_to_group(self,group_name,device):
@@ -901,7 +901,7 @@ class control_panel:
         
             self.groups[group_name].append(device)
             # groups['living_room'] -->[]
-            print(f'your devic is added to {group_name}')
+            print(f'your device is added to {group_name}')
         else:
             print('you group is not exist....')
         
@@ -922,7 +922,7 @@ class control_panel:
             print(f'groups {group_name} created !!')
             
         else:
-            print('your group name is duplicated')
+            print(f'your group name is duplicated')
         
     
     def add_device_to_group(self,group_name,device):
@@ -931,9 +931,9 @@ class control_panel:
         
             self.groups[group_name].append(device)
             # groups['living_room'] -->[]
-            print(f'your devic is added to {group_name}')
+            print(f'your device is added to {group_name}')
         else:
-            print('you group is not exist....')
+            print(f'groups {group_name} is not exist....')
         
         
         
@@ -945,10 +945,10 @@ class control_panel:
             new_device=Device(location,group_name,device_type,device_name)
             
             self.groups[group_name].append(new_device)
-            print('///////bamofghtia')
+            print(f'device','{device_name}' added to group '{group_name}'.')
             
         else:
-            print('agha in esm vojod ndre') #...
+            print(f'group','{group_name}' not found.') #...
         
 a=control_panel()     
         
@@ -1193,12 +1193,12 @@ class Device:
 
 
     def turn_on(self):
-        print('Done!!!')
+        print(f'device {self.device_name} in group {self.group} is ON')
         self.status='on'
         #--_.code ejra mishe
 
     def turn_off(self):
-        print('off')
+        print(f'device {self.dvice_name} in group {self.group} is OFF')
         self.status='off'
         #code ejra mishe 
        
@@ -1222,7 +1222,9 @@ class Sensor:
                 
         
     def read_data(self):
-        return 25
+       a=np.random.uniform(22,27)
+       print(f'sensor {self.sensor_name} recorded {round(a,2)} c')
+       return a
 
 
 
@@ -1249,7 +1251,7 @@ class control_panel:
             # groups['living_room'] -->[]
             print(f'your device is added to {group_name}')
         else:
-            print(f'you group is not exist....')
+            print(f'group '{group_name}' not found.')
         
         
         
@@ -1264,7 +1266,7 @@ class control_panel:
             print(f'device{device_name} of type {device_type} created and added to group {group_name}.')
             
         else:
-            print(f'group'{group_name} was not found.')
+            print(f'group'{group_name}' was not found.')
         
         
         
@@ -1280,7 +1282,7 @@ class control_panel:
             
         else:
             
-            print('....')
+            print(f'group is not found')
             
             
             
