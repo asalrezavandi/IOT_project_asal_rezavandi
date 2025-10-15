@@ -1293,94 +1293,89 @@ class control_panel:
         
         
         
-    def trun_on_in_group(self,group_name):
-        
-        if group_name in self.groups:
-            
-            devices=self.get_devices(group_name)
-            
-            for device in devices:
-                device.turn_on()
-            
-        else:
-            print('....') 
-            
-            
-            
-    def turn_off_in_group(self,group_name):
-        '''
-        biad dakhele oon group_name doone doone ro
-        khamoosh kone 
-        
-        
-        '''
-        pass
-    
-    
-    def turn_on_all(self):
-        '''
-        tamame device haro roshan kone
-        too livign toome parking hgarjaa
-        hamaroo roshan kone
-        '''
-        pass
-    
-    
-    def turn_off_all(self):
-        '''
-        hamaro khamoosh kone
-        '''
-        
-        
-        pass
-    
-    
-    def get_status_in_group(self,group_name):
-        '''
-        be ezaye device haye tooye masalan felan group
-        living_room --> bebine roshanan ya khamoshan
-        porint kone
-        
-        a.get_status_in_group('living_room')
-        
-        device {name} is on
-        ... ..  .. ois off
-        .. .. .. is on
-        '''
-        
-    def get_status_in_device_type(self,dvice_type):
-        
-        '''
-        varaye kole devicd haee k hasan
-        bere device_typeshono check kone
-        
-        fght lamparo bere check kone
-        
-        lamps -->lampa
-        doors --L> fght doora
-        (too ch groupi , device_type)
-        
-        statuseshono bede
+  def trun_on_in_group(self,group_name):
 
-        
-        '''
-        pass
-    
-    
-    #tabe ee bename create_device???
-    
-    def create_sensor(self):
-        pass
-    
-    def create_multiple_sensor(self):
-        pass
-    
-    
-    
-    
-        
-    
+if group_name in self.groups:
+
+devices=self.get_devices(group_name)
+
+for device in devices:
+device.turn_on()
+
+else:
+print('....')
 
 
 
-        
+def turn_off_in_group(self,group_name):
+if group_name in self.groups:
+    for device in
+self.groups[group_name]:
+    device.turn_off()
+   print(f'all devices in {group_name} are off')
+   else:
+     print(f'group not found')
+
+
+
+
+def turn_on_all(self):
+   for group in self.groups:
+      for device in self.groups[group]:
+      device.turn_on()
+print(f'all devices in home are on now')
+
+
+def turn_off_all(self):
+    for group in self.groups:
+      for device in self.groups[group]:
+         device.turn_off()
+print(f'all devices in home are off now')
+
+
+
+def get_status_in_group(self,group_name):
+'''
+be ezaye device haye tooye masalan felan group
+living_room --> bebine roshanan ya khamoshan
+porint kone
+
+a.get_status_in_group('living_room')
+
+device {name} is on
+... .. .. ois off
+.. .. .. is on
+'''
+
+def get_status_in_device_type(self,dvice_type):
+
+'''
+varaye kole devicd haee k hasan
+bere device_typeshono check kone
+
+fght lamparo bere check kone
+
+lamps -->lampa
+doors --L> fght doora
+(too ch groupi , device_type)
+
+statuseshono bede
+
+
+'''
+pass
+
+
+#tabe ee bename create_device???
+
+def create_sensor(self):
+pass
+
+def create_multiple_sensor(self):
+pass
+
+
+
+
+
+
