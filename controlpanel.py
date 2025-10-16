@@ -1335,38 +1335,25 @@ print(f'all devices in home are off now')
 
 
 def get_status_in_group(self,group_name):
-'''
-be ezaye device haye tooye masalan felan group
-living_room --> bebine roshanan ya khamoshan
-porint kone
+if group_name in self.groups:
+    for device in
+self.groups[group_name]:
+         st='on' if device.get_status()
+else 'off'
+         printt(f'device {device.device_name} is in group {group_name}{st}.')
+        else:
 
-a.get_status_in_group('living_room')
+        print(f'group not found')
 
-device {name} is on
-... .. .. ois off
-.. .. .. is on
-'''
 
 def get_status_in_device_type(self,dvice_type):
 
-'''
-varaye kole devicd haee k hasan
-bere device_typeshono check kone
-
-fght lamparo bere check kone
-
-lamps -->lampa
-doors --L> fght doora
-(too ch groupi , device_type)
-
-statuseshono bede
 
 
-'''
-pass
 
 
-#tabe ee bename create_device???
+
+
 
 def create_sensor(self):
 pass
