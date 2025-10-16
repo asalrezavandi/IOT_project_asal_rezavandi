@@ -1347,22 +1347,34 @@ else 'off'
 
 
 def get_status_in_device_type(self,dvice_type):
+print(f'status of device type '{device_type}' :')
+
+    for group in self.groups[group]:
+        for device in self.groups[group];
+           if device.device_type == device type:
+        st='on' if
+        device.get_status() else 'off'
+        print(f'{device.device_name} in group {group} --> {st}')
+        
+
+
+def create_sensor(self, group_name, sensor_type, sensor_name):
+    if group_name in self.groups:
+    location = 'home'
+    sensor = Sensor(location, group_name, sensor_type, sensor_name)
+    self.groups[group_name].append(sensor)
+    print(f'sensor{sensor_name} in group {group_name} created.')
+    else:
+        print(f'group not found')
 
 
 
 
-
-
-
-
-def create_sensor(self):
-pass
-
-def create_multiple_sensor(self):
-pass
-
-
-
-
-
-
+def create_multiple_sensor(self, group_name, sensor_type, count):
+if group_name in self.groups:
+for i in range(1, count+1):
+s_name = f'{sensor_type}_{i}'
+self.creat_sensor(group_name, sensor_type, s_name)
+    print(f'{count} sensor in type of {sensor_type} created.')
+    else:
+        print(f'group not found')
